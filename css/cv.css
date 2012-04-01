@@ -1,0 +1,75 @@
+/*import*/
+@import url("publicSiteCommon.css");
+
+body {
+
+     display             :   -moz-box;
+     -moz-box-orient     :   vertical;
+    
+    display             :   -webkit-box;
+    -webkit-box-orient  :   vertical;
+    
+    display             :   box;
+    box-orient          :   vertical;
+}
+
+body #header {
+    display             :   -webkit-box;
+    -webkit-box-orient  :   horizontal;
+    
+    display             :   -moz-box;
+    -moz-box-orient     :   horizontal;
+    
+    display             :   box;
+    box-orient          :   horizontal;
+    
+    padding             :   0px 50px 0px 50px;
+}
+
+body header div {
+     -webkit-box-flex  :  1;  
+}
+
+body #content article {
+
+     padding             :   0px 50px 0px 50px;
+     margin		 :   10px 0 10px 0;
+
+     display             :   -webkit-box;
+     -webkit-box-orient     :   vertical;
+     -webkit-box-flex	    : 1;
+        
+}
+
+body #content article header {
+     margin   :	      0 0 10px 0;
+}
+
+
+body #education .eduBox {
+     padding	:	0 0 0 0;
+     margin	:	0 0 5px 0;
+}
+
+body #education .eduBox h4 {
+     padding	:	0;
+     margin	:	0;
+}
+
+body #skills .skillBox {
+     display		: -webkit-box;
+     -webkit-box-orient	: horizontal;	
+}
+
+body #skills .skillBox .left{
+     -webkit-box-flex : 1;
+}
+
+body #skills .skillBox .right{
+     -webkit-box-flex : 2;
+     -webkit-box-pack : start;
+}
+
+body #content article  ul {
+     margin-top : 0em;
+}
