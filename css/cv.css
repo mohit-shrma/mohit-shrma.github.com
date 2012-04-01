@@ -37,7 +37,11 @@ body header h3 {
 }
 
 body header div {
-     -webkit-box-flex  :  1;  
+     -webkit-box-flex  :  1;
+
+     -moz-box-flex  :  1;
+
+     box-flex	    :  1;
 }
 
 body #content article {
@@ -45,10 +49,18 @@ body #content article {
      padding             :   0px 50px 0px 50px;
      margin		 :   10px 0 10px 0;
 
-     display             :   -webkit-box;
+     display                :   -webkit-box;
      -webkit-box-orient     :   vertical;
      -webkit-box-flex	    : 1;
-        
+
+     display             :   -moz-box;
+     -moz-box-orient     :   vertical;
+     -moz-box-flex	 : 1;
+
+     display        :   box;
+     box-orient     :   vertical;
+     box-flex	    : 	1;
+    
 }
 
 body #content article header {
@@ -68,16 +80,33 @@ body #education .eduBox h4 {
 
 body #skills .skillBox {
      display		: -webkit-box;
-     -webkit-box-orient	: horizontal;	
+     -webkit-box-orient	: horizontal;
+
+     display		: -moz-box;
+     -moz-box-orient	: horizontal;
+
+     display		: box;
+     box-orient		: horizontal;
+
 }
 
 body #skills .skillBox .left{
      -webkit-box-flex : 1;
+
+     -moz-box-flex : 1;
+
+     box-flex : 1;     
 }
 
 body #skills .skillBox .right{
      -webkit-box-flex : 2;
      -webkit-box-pack : start;
+
+     -moz-box-flex : 2;
+     -moz-box-pack : start;
+
+     box-flex : 2;
+     box-pack : start;
 }
 
 body #content article  ul {
@@ -86,6 +115,10 @@ body #content article  ul {
 
 body #content .pubdesc a {
      text-decoration : underline;
+}
+
+body #content #extras {
+     padding-bottom  : 30px; 
 }
 
 body #content #extras .expDesc  a {
