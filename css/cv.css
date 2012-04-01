@@ -23,7 +23,17 @@ body #header {
     display             :   box;
     box-orient          :   horizontal;
     
-    padding             :   0px 50px 0px 50px;
+    padding             :   30px 50px 0px 50px;
+
+}
+
+body #header #nameTitleContainer {
+     font-size  : 2.5em;
+     font-family: 'Droid Serif', serif;
+}
+
+body header h3 {
+    color 		:   #b72a54;     
 }
 
 body header div {
@@ -73,3 +83,12 @@ body #skills .skillBox .right{
 body #content article  ul {
      margin-top : 0em;
 }
+
+body #content .pubdesc a {
+     text-decoration : underline;
+}
+
+body #content #extras .expDesc  a {
+     text-decoration : underline;
+}
+
