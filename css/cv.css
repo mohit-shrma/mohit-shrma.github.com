@@ -121,6 +121,11 @@ body #content #extras {
      padding-bottom  : 30px; 
 }
 
+body #content #extras a {
+     text-decoration : underline;
+}
+
+
 body #content #extras .expDesc  a {
      text-decoration : underline;
 }
