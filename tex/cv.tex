@@ -1,0 +1,216 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Mohit Sharma
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Address:}   & 117 Pleasant St SE, Room 452, Minneapolis, MN 55455, USA  \\
+    \textsc{Phone:}     & +1 631 353 9519\\
+    \textsc{email:}     & \href{mailto:mohit@cs.umn.edu}{mohit@cs.umn.edu}
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{r|l}	
+ \textsc{Current}  & Ph.D. Candidate in \textsc{Computer Science},
+  \textbf{University of Minnesota}, Minneapolis\\
+ \textsc{Expected} 12/2017& Thesis topic: ``Preference modeling and accuracy in
+  recommender systems''\\
+  & \small Advisor: Prof. George
+  \textsc{Karypis} | \normalsize \textsc{Gpa}: 3.9/4.0  \\\multicolumn{2}{c}{}\\
+  %&\normalsize \textsc{Gpa}: 28.61/30\hyperlink{grds}{\hfill | \footnotesize Detailed List of Exams}\\&\\
+
+  \textsc{2016} & Masters Degree in \textsc{Computer Science},
+  \textbf{University of Minnesota}, Minneapolis \\
+                     %&110/110 \small\emph{summa cum laude}, \normalsize\textbf{Bocconi University}, Milan\\
+%& Thesis: ``Portfolio Strategies with Target Prices'' | \small Advisor: Stefano \textsc{Bonini}\\
+                     %&Coursework: Machine Learning, Data Mining, Artificial
+%  Intelligence,  \\
+%                   &Convex Optimization, Matrix Theory, Parallel Computing \\
+                     &\normalsize \textsc{Gpa}: 3.9/4.0 \\
+                   \multicolumn{2}{c}{}\\ %\hyperlink{grds_cleli}{\hfill| \footnotesize Detailed List of Exams}\\&\\
+
+   
+   \textsc{June} 2009& Bachelor of Engineering in \textsc{Information
+      Technology}, \\
+      &\textbf{Delhi College of Engineering}, Delhi\\
+%&Coursework: Algorithms, Data Structures, Operating System, Computer Networks\\
+&\textsc{Grade}: 76/100\\ %\textsc{Department Rank}: 9\\
+\multicolumn{2}{c}{}\\
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+  
+  \textsc{Current} & Graduate Research Assistant at \textsc{University of
+Minnesota}, MN\\
+JAN 2015  & \footnotesize{Research towards Ph.D. thesis.} \\\multicolumn{2}{c}{} \\
+ 
+
+  \textsc{June-Nov 2014} & Research Intern at \textsc{Samsung Research America}, CA\\
+                       &\emph{Recommender Systems}\\
+                       &\footnotesize{Developed large scale \textit{recommender
+                       sytem} for Smart TV using
+                     \textit{SPARK, HADOOP}. Designed algorithms for 
+                   item cold-start Top-$n$ recommendations. (\emph{Machine
+                 learning})}\\\multicolumn{2}{c}{} \\
+
+  \textsc{Summer 2013} & Research Intern at \textsc{Technicolor Labs}, Palo Alto, CA \\
+                       &\footnotesize{ Developed a web-based  prototype (\emph{Python,
+                 MongoDB}) to learn users'
+                   preferences in \emph{recommender systems} using
+                 \emph{multi-arm bandit} algorithms. (\emph{Machine Learning})} \\\multicolumn{2}{c}{} \\
+
+  \textsc{July 2009 - Dec 2011} & Software Development Engineer at
+                \textsc{Citrix R\&D India Private Limited}, Bangalore \\
+                       &\footnotesize{ Worked on development of  \emph{Citrix
+                 Receiver} app for
+                   \emph{Blackberry, Android}  and \emph{HTML5} platforms
+                   (\emph{Java, Javascript}).
+                   }\\\multicolumn{2}{c}{} \\  
+
+  %\textsc{Jan 2009 - Mar 2009} & Engineering Intern at \textsc{Hi-Tech Robotics
+  %               Systemz Ltd}, India \\
+  %               &\footnotesize{ Developed a \emph{p2p} communication api in
+  %               \emph{C++}
+  %               using NAT traversal techniques for exchanging messages between
+  %             nodes or bots via internet.} \\\multicolumn{2}{c}{} \\
+
+  \textsc{Summer 2008} & Engineering Intern at \textsc{Google India Private
+             Limited}, India \\
+             DEC 2007 - FEB 2008  &\footnotesize{ Developed a web-based Workflow Management
+           tool hosted internally on \emph{Google AppEngine} (\emph(Python)).
+       Developed initial version of tool using \emph{PHP, MySQL} and \emph{
+     Javascript}.} \\\multicolumn{2}{c}{} \\
+  
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Publications}
+\begin{tabular}{rp{11cm}}
+  \textsc{WWW} 2017 & Learning from sets of items in recommender systems
+  (under-review)\\
+  \textsc{PAKDD} 2017 & Matrix factorization and item recommendations
+  (under-review)\\
+  \textsc{Big Data Novatica} 2016 & Big Data and Recommender Systems \\
+ \textsc{SDM} 2015 & Feature-based factorized Bilinear Similarity Model for
+  Cold-Start Top-n Item Recommendation
+  \\
+ \textsc{IEEE ICNS} 2011 & A new approach to Dynamic Network Routing using Omicron
+  Ant Colony Algorithm\\
+\end{tabular}
+
+\section{Graduate Projects}
+\begin{description}
+  \item[Recommender System with Implicit Feedback using Low-Rank Matrix
+    Factorization:] Used implicit feedback with low rank matrix factorization
+    technique to improve recommendations in massively multiplayer online games.
+  \item[Matrix completion using crowdsourcing:] Learn missing values
+    in ratings matrix using crowdsourcing  and evaluate recommendation results.
+  \item[Optimization techniques for routing in dynamic networks:] Implemented
+    Alternating Direction Method of Multipliers to minimize flow costs to obtain
+    the best path in routing.
+  %\item[Comparison of draft assemblies of Chinese Hamster genome and Chinese
+  %  Hamster Ovary(CHO- K1):] Devised methods of comparing two assemblies as no
+  %  standard method of comparison is available and found the consensus regions
+  %  between the two large genome datasets.
+\end{description}
+
+\iffalse
+\section{Undergraduate Project}
+\begin{description}
+  \item[Routing in Computer Networks using Ant Colony Optimization \& Genetic algorithm:] Designed and implemented a dynamic routing algorithm on NS2(C++,
+  TCL) using Ant and Genetic algorithms.  
+\end{description}
+
+\section{Other Projects}
+\begin{description}
+  \item[BandBaaja app:] Wrote and released “Band Baaja” a location
+    aware android app to find music events across major Indian cities. Server
+    side written in python and hosted on Google’s AppEngine platform. 
+  \item[Cocktails app:] Wrote and released “Cocktails” app for Blackberry
+    Playbook tablet, Android tablets and iPad using HTML5.
+  \item[Github:] \url{https://github.com/mohit-shrma}  
+\end{description}
+
+\fi
+
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}
